@@ -24,12 +24,7 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()
-                .withClient("studentService")
-                .secret("{noop}thisissecret")
-                .authorizedGrantTypes("refresh_token", "password", "client_credentials")
-                .scopes("webclient")
-                .and()
-                .withClient("schoolService")
+                .withClient("clientapp")
                 .secret("{noop}thisissecret")
                 .authorizedGrantTypes("refresh_token", "password", "client_credentials")
                 .scopes("webclient");
