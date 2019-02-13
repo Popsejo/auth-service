@@ -14,7 +14,6 @@ import java.util.Map;
 
 @SpringBootApplication
 @RestController
-@EnableResourceServer
 @EnableAuthorizationServer
 public class AuthServiceApplication {
     public static void main(String[] args) {
