@@ -15,6 +15,7 @@ import java.util.Map;
 @SpringBootApplication
 @RestController
 @EnableAuthorizationServer
+@EnableResourceServer
 public class AuthServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(AuthServiceApplication.class, args);

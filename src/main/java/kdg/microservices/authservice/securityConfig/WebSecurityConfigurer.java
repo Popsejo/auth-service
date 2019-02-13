@@ -33,10 +33,10 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.jdbcAuthentication().dataSource(dataSource)/*.withUser("student")
-                ("{noop}password")
+                .password("{noop}password")
                 .roles("USER")
                 .and()
-                .withUser("docent").password(passwordEncoder().encode("password"))
+                .withUser("docent").password("{noop}password")
                 .roles("USER", "ADMIN")*/;                      //uncomment only for inserting users
     }
 
